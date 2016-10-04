@@ -17,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.RadioButton;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ import pe.edu.uni.ctic.monitor.Device.Dispositivo;
 import pe.edu.uni.ctic.monitor.Device.InfoDevicesActivityFragment;
 import pe.edu.uni.ctic.monitor.Maps.HeatMap;
 import pe.edu.uni.ctic.monitor.Maps.MarkersMap;
+import pe.edu.uni.ctic.monitor.Parametrizacion.Parametrizacion;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -140,6 +142,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.heat_map) {
             fragment = new HeatMap();
             getSupportActionBar().setTitle(R.string.heat_map);
+        } else if (id == R.id.paramfil) {
+            fragment = new Parametrizacion();
+            getSupportActionBar().setTitle("Parametrización Test");
         }
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.content_main, fragment);

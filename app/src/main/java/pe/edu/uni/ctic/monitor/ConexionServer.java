@@ -112,6 +112,31 @@ public class ConexionServer {
         return dispositivos;
     }
 
+    public ArrayList<String> receiveFiltroDispositivo(String func)throws IOException {
+
+        InputStream is = null;
+        int len = 100;
+        ArrayList<String> tipos=new ArrayList<>();
+        try {
+            HttpURLConnection conn = AbroConexion(urlp+func);
+            is = conn.getInputStream();
+            // Convert the InputStream into a string
+            String contentAsString = readIt(is, len);
+            JSONArray jsonArray = new JSONArray (contentAsString);
+            for(int i=0; i<jsonArray.length(); i++){
+                String value = jsonArray.optString(i);
+                tipos.add(value.substring(0, 1).toUpperCase() + value.substring(1));
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } finally {
+            if (is != null) {
+                is.close();
+            }
+        }
+        return tipos;
+    }
+
     private HttpURLConnection AbroConexion(String urlp){
         HttpURLConnection conn = null;
         try {

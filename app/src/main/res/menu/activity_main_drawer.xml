@@ -7,6 +7,10 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/param" />
         <item
+            android:id="@+id/paramfil"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Parametrización Prueba" /> 
+        <item
             android:id="@+id/marker_map"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/marker_map" />
@@ -14,10 +18,6 @@
             android:id="@+id/heat_map"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/heat_map" />
-        <item
-            android:id="@+id/ocio"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/ocio" />
     </group>
 
     <!--<item android:title="Communicate">
