@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Monitor</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="ocio">Ocio</string>
+    <string name="marker_map">Mapa de Marcadores</string>
+    <string name="heat_map">Mapa de Calor</string>
+    <string name="param">Parametrización</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
