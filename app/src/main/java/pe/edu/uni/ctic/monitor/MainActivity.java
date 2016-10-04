@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.param) {
             try {
                 new cargarDispositivos("consInf/").execute().get();
                 Bundle bundle = new Bundle();
@@ -134,10 +134,10 @@ public class MainActivity extends AppCompatActivity
                 e.printStackTrace();
             }
             getSupportActionBar().setTitle(R.string.param);
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.marker_map) {
             fragment = new MarkersMap();
             getSupportActionBar().setTitle(R.string.marker_map);
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.heat_map) {
             fragment = new HeatMap();
             getSupportActionBar().setTitle(R.string.heat_map);
         }
