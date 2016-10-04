@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_selecciona"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context="pe.edu.uni.ctic.monitor.Parametrizacion.Parametrizacion">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <RadioButton
+            android:text="Cansat"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioBCansat"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:text="Sensores"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioBSensor"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:onClick="onRadioButtonClicked"/>
+    </LinearLayout>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"/>
+
+    <!-- A RecyclerView with some commonly used attributes -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
